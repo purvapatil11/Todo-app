@@ -1,0 +1,12 @@
+*{
+  background: #0A232E;
+}
+button{
+  background: #0f0e0e; 
+   }
+  button:hover{
+    outline: 2px solid white;
+  }
+nav{
+  background:#808183;
+}
