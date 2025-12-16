@@ -12,7 +12,7 @@ function App() {
 
   const addTodoHandler = async ()=>{
     try {
-      const res = await axios.post("http://localhost:8000/api/v1/todo/", {title},{
+      const res = await axios.post("http://localhost:8000/api/v1/todo", {title},{
         headers:{
           'Content-type':"application/json"
         },
