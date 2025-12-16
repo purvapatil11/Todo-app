@@ -2,11 +2,18 @@
   background: #0A232E;
 }
 button{
-  background: #0f0e0e; 
+  background: #0f0e0e;
+   
    }
   button:hover{
     outline: 2px solid white;
   }
 nav{
   background:#808183;
+}
+Input:hover{
+  outline: 0.5px solid white;
+}
+textarea:hover{
+  outline: 0.5px solid white;
 }
