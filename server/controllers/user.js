@@ -17,7 +17,7 @@ export const Register = async (req, res) => {
     // 2.if user exits
     const user = await User.findOne({ email });
     if (user) {
-      return res.status(409).json({
+      return res.status(400).json({
         success: false,
         message: "This email is already registered",
       });
@@ -54,7 +54,7 @@ export const login = async (req, res) => {
 
     // 1. Validation
     if (!email || !password) {
-      return res.status(403).json({
+      return res.status(400).json({
         success: false,
         message: "All fields are required",
       });
@@ -64,7 +64,7 @@ export const login = async (req, res) => {
     const user = await User.findOne({ email });
 
     if (!user) {
-      return res.status(403).json({
+      return res.status(400).json({
         success: false,
         message: "Incorrect email or password",
       });
@@ -74,7 +74,7 @@ export const login = async (req, res) => {
     const isPasswordMatch = await bcrypt.compare(password, user.password);
 
     if (!isPasswordMatch) {
-      return res.status(403).json({
+      return res.status(400).json({
         success: false,
         message: "Incorrect email or password",
       });
