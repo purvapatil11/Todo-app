@@ -5,7 +5,7 @@ import isAuthenticated from "../middlewares/isauthenticated.js";
 
 const router = express.Router();
 
-router.route("/").post(isAuthenticated,createTodo);
+router.route("/").post(createTodo);
 router.route("/getAllTodos").get(getAllTodos);
 router.route("/:todoId").put(isAuthenticated,updateTodo);
 router.route("/:todoDel").delete(isAuthenticated,deleteTodo);
