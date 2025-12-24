@@ -1,60 +1,116 @@
-# Todo-app
-A Todo management application developed on the MERN stack (MongoDB, Express, React, Node.js). It delivers basic CRUD functionality for tasks with a modern UI and a REST-driven backend. Project includes preliminary Docker configuration for future containerization.
+# 📝 Todo App (MERN Stack)
 
-##Tech Stack
-Frontend
-1. React
-2. Vite
-3. Tailwind CSS
-4. Shadcn UI
+A full‑stack **Todo Management Application** built using the **MERN stack** (MongoDB, Express, React, Node.js). The application provides a clean, modern UI and a REST‑driven backend to perform complete **CRUD operations** on tasks.
 
-Backend
-1. Node.js
-2. Express.js
-3. MongoDB
+This project is designed with scalability in mind and includes **preliminary Docker configuration** for future containerized deployment.
 
-Containerization(Planned)
-1. Dockerfile for backend
-2. Dockerfile for frontend
-3. Docker Compose for execution
+---
 
-Project structure
+## 🚀 Features
+
+* Create, Read, Update, and Delete (CRUD) todos
+* RESTful API architecture
+* Modern, responsive UI
+* Clean project separation (client & server)
+* Environment‑based configuration
+* Docker support (planned & partially implemented)
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
+* **React** (with Vite)
+* **Tailwind CSS**
+* **shadcn/ui**
+
+### Backend
+
+* **Node.js**
+* **Express.js**
+* **MongoDB**
+
+### Containerization (Planned)
+
+* Dockerfile (Frontend)
+* Dockerfile (Backend)
+* Docker Compose (Execution – planned)
+
+---
+
+## 📁 Project Structure
+
+```
 root/
- ├─ client/       # React interface
- ├─ server/       # API and database logic
- ├─ docker-compose.yml (planned)
- └─ README.md
+│
+├── client/              # React frontend
+├── server/              # Backend API & DB logic
+├── docker-compose.yml   # Planned
+├── README.md
+```
 
-Local Setup(Without Docker)
+---
 
-Prerequisites
----> Node.js
----> MongoDB(local setup)
+## ⚙️ Local Setup (Without Docker)
 
-Installation
-Clone this repo and install dependencies
+### Prerequisites
+
+Make sure the following are installed on your system:
+
+* **Node.js** (v18+ recommended)
+* **MongoDB** (local or cloud instance)
+
+---
+
+### 📦 Installation
+
+Clone the repository and install dependencies:
+
+```bash
 git clone https://github.com/purvapatil11/Todo-app.git
-cd <project-folder>
+cd Todo-app
+```
 
-Run: 
-Server(backend):
+---
+
+### ▶️ Running the Application
+
+#### Start Backend Server
+
+```bash
 cd server
+npm install
 npm run dev
+```
 
-Client(frontend):
+The backend will run on **[http://localhost:8000](http://localhost:8000)**
+
+---
+
+#### Start Frontend Client
+
+```bash
 cd client
+npm install
 npm run dev
+```
 
-Environment Variables
-Create .env inside /server:
-MONGO_URI=<your-mongodb-uri>
+The frontend will run on **[http://localhost:5173](http://localhost:5173)** (default Vite port)
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env` file inside the `/server` directory:
+
+```
+MONGO_URI=your_mongodb_connection_string
 PORT=8000
+```
+## 🐳 Docker Status
 
-Docker Status
-dockerfiles for backend and frontend are committed. Execution will be validated later on a compatible system.
-
-
-
-
-
+* Dockerfiles for **frontend** and **backend** are committed
+* Docker Compose setup is planned
+* Full container execution will be validated on a compatible system in future updates
 
